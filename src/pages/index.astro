@@ -1,0 +1,173 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture } from "@astrojs/image/components";
+---
+
+<!-- Redirect to first floor for better sharing -->
+<script is:inline>
+  if (window.location.href.includes("#")) {
+    console.log("loaded with id!");
+  } else {
+    console.log("loaded without id...");
+    window.location.assign(`${window.location.href}#floor-1`);
+  }
+</script>
+
+<Layout title="Elevator Showcase" noScroll={true} smoothScroll={true}>
+  <div class="controller">
+    <ul>
+      <li>
+        <a href="#floor-1">Floor 1</a>
+      </li><li>
+        <a href="#floor-2">Floor 2</a>
+      </li><li>
+        <a href="#floor-3">Floor 3</a>
+      </li>
+    </ul>
+  </div>
+  <section id="floor-1">
+    <h1>This is the first floor!</h1>
+    <p>Here is some fillter text</p>
+  </section>
+  <section id="floor-2">
+    <h1>This is the second!</h1>
+    <p>Welcome to my second floor! Look at this image.</p>
+    <div class="image-container">
+      <Picture
+        src="https://upload.wikimedia.org/wikipedia/commons/6/60/Product_Life_Cycle_Management.png"
+        alt="A random image off wikipedia"
+        sizes="(max-width: 650em)"
+        widths={[500, 1535]}
+        aspectRatio="1535:1016"
+        formats={["avif", "webp", "png"]}
+      />
+    </div>
+  </section>
+  <section id="floor-3">
+    <h1>This is the final floor!</h1>
+    <p>This is actually below the first floor in the source code.</p>
+    <p>And some extra long text to add scrolling for mobile users</p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+      consectetur culpa consequuntur neque quia fugiat harum corporis repellat
+      minus officia inventore possimus quos facilis maiores libero aut
+      architecto assumenda odio porro cumque, beatae eum placeat! Inventore
+      recusandae eveniet, repellendus ut itaque dicta veniam amet doloribus
+      facilis quo eaque accusantium ad quasi vel incidunt, soluta explicabo
+      veritatis, omnis eius alias beatae voluptatum! Nemo ipsam sequi nam,
+      corporis quaerat explicabo pariatur quasi dicta omnis quas commodi ad
+      laboriosam quo quos maiores ipsa. Aliquid laborum libero dignissimos
+      sapiente quam consequuntur temporibus similique, tempora dicta possimus
+      rerum nisi, voluptas blanditiis amet soluta atque repellendus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+      consectetur culpa consequuntur neque quia fugiat harum corporis repellat
+      minus officia inventore possimus quos facilis maiores libero aut
+      architecto assumenda odio porro cumque, beatae eum placeat! Inventore
+      recusandae eveniet, repellendus ut itaque dicta veniam amet doloribus
+      facilis quo eaque accusantium ad quasi vel incidunt, soluta explicabo
+      veritatis, omnis eius alias beatae voluptatum! Nemo ipsam sequi nam,
+      corporis quaerat explicabo pariatur quasi dicta omnis quas commodi ad
+      laboriosam quo quos maiores ipsa. Aliquid laborum libero dignissimos
+      sapiente quam consequuntur temporibus similique, tempora dicta possimus
+      rerum nisi, voluptas blanditiis amet soluta atque repellendus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+      consectetur culpa consequuntur neque quia fugiat harum corporis repellat
+      minus officia inventore possimus quos facilis maiores libero aut
+      architecto assumenda odio porro cumque, beatae eum placeat! Inventore
+      recusandae eveniet, repellendus ut itaque dicta veniam amet doloribus
+      facilis quo eaque accusantium ad quasi vel incidunt, soluta explicabo
+      veritatis, omnis eius alias beatae voluptatum! Nemo ipsam sequi nam,
+      corporis quaerat explicabo pariatur quasi dicta omnis quas commodi ad
+      laboriosam quo quos maiores ipsa. Aliquid laborum libero dignissimos
+      sapiente quam consequuntur temporibus similique, tempora dicta possimus
+      rerum nisi, voluptas blanditiis amet soluta atque repellendus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+      consectetur culpa consequuntur neque quia fugiat harum corporis repellat
+      minus officia inventore possimus quos facilis maiores libero aut
+      architecto assumenda odio porro cumque, beatae eum placeat! Inventore
+      recusandae eveniet, repellendus ut itaque dicta veniam amet doloribus
+      facilis quo eaque accusantium ad quasi vel incidunt, soluta explicabo
+      veritatis, omnis eius alias beatae voluptatum! Nemo ipsam sequi nam,
+      corporis quaerat explicabo pariatur quasi dicta omnis quas commodi ad
+      laboriosam quo quos maiores ipsa. Aliquid laborum libero dignissimos
+      sapiente quam consequuntur temporibus similique, tempora dicta possimus
+      rerum nisi, voluptas blanditiis amet soluta atque repellendus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+      consectetur culpa consequuntur neque quia fugiat harum corporis repellat
+      minus officia inventore possimus quos facilis maiores libero aut
+      architecto assumenda odio porro cumque, beatae eum placeat! Inventore
+      recusandae eveniet, repellendus ut itaque dicta veniam amet doloribus
+      facilis quo eaque accusantium ad quasi vel incidunt, soluta explicabo
+      veritatis, omnis eius alias beatae voluptatum! Nemo ipsam sequi nam,
+      corporis quaerat explicabo pariatur quasi dicta omnis quas commodi ad
+      laboriosam quo quos maiores ipsa. Aliquid laborum libero dignissimos
+      sapiente quam consequuntur temporibus similique, tempora dicta possimus
+      rerum nisi, voluptas blanditiis amet soluta atque repellendus.
+    </p>
+  </section>
+</Layout>
+
+<style lang="scss">
+  // General Styles
+  section {
+    margin: auto;
+    width: min(100vw, 60rem);
+    height: 100vh;
+    padding-block: 2rem;
+    padding-inline: min(2vw, 3rem);
+    scrollbar-gutter: stable both-edges;
+    overflow-y: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  // Main Styles
+
+  section {
+    overscroll-behavior: contain;
+
+    > * + * {
+      margin-top: 1em;
+    }
+    // add more styles here!
+  }
+  :global(img) {
+    width: 100%;
+    height: auto;
+  }
+
+  .controller {
+    position: fixed;
+    right: 0;
+    background-color: var(--green-300);
+
+    > ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .image-container {
+    height: 300px;
+  }
+
+  #floor-1 {
+    background-color: var(--lightblue-300);
+  }
+  #floor-2 {
+    background-color: var(--lightblue-200);
+  }
+  #floor-3 {
+    background-color: var(--lightblue-100);
+  }
+</style>
