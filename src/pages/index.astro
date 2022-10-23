@@ -130,6 +130,10 @@ import { Picture } from "@astrojs/image/components";
   h1 {
     text-align: center;
   }
+  :global(img) {
+    width: 100%;
+    height: auto;
+  }
 
   // Main Styles
 
@@ -141,12 +145,9 @@ import { Picture } from "@astrojs/image/components";
     }
     // add more styles here!
   }
-  :global(img) {
-    width: 100%;
-    height: auto;
-  }
 
   .controller {
+    z-index: 1000;
     position: fixed;
     right: 0;
     background-color: var(--green-300);
