@@ -5,10 +5,7 @@ import { Picture } from "@astrojs/image/components";
 
 <!-- Redirect to first floor for better sharing -->
 <script is:inline>
-  if (window.location.href.includes("#")) {
-    console.log("loaded with id!");
-  } else {
-    console.log("loaded without id...");
+  if (!window.location.href.includes("#")) {
     window.location.assign(`${window.location.href}#floor-1`);
   }
 </script>
