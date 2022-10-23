@@ -1,13 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-  <path fill="#000" d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"/>
-  <path fill="url(#gradient)" d="M18 28a7.63 7.63 0 0 1-5-2c-1.4 2.1-.35 4.35.6 5.55.14.17.41.07.47-.15.44-1.8 2.93-1.22 2.93.6 0 2.28.87 3.4 1.72 3.81.34.16.59-.2.49-.56-.31-1.05-.29-2.46 1.29-3.25 3-1.5 3.17-4.83 2.5-6-.67.67-2.6 2-5 2Z"/>
-  <defs>
-    <linearGradient id="gradient" x1="16" x2="16" y1="32" y2="24" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#000"/>
-      <stop offset="1" stop-color="#000" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-	<style>
-    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}
-  </style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <path d="M128,32C128,14.339 113.661,0 96,0L32,0C14.339,0 0,14.339 0,32L0,96C0,113.661 14.339,128 32,128L96,128C113.661,128 128,113.661 128,96L128,32Z" style="fill:rgb(236,239,241);"/>
+    <g transform="matrix(0.765625,0,0,0.6875,15,33)">
+        <path d="M128,0L0,0L0,128L128,128L128,0ZM119.837,9.091L119.837,118.909C119.837,118.909 8.163,118.909 8.163,118.909C8.163,118.909 8.163,9.091 8.163,9.091L119.837,9.091Z" style="fill:rgb(38,50,56);"/>
+    </g>
+    <g transform="matrix(0.8,2.44929e-17,2.44929e-17,0.6,20.175,7.8)">
+        <path d="M31.5,2L44,27L19,27L31.5,2Z" style="fill:rgb(96,125,139);"/>
+    </g>
+    <g transform="matrix(-0.8,-9.79717e-17,7.34788e-17,-0.6,107.825,25.2)">
+        <path d="M31.5,2L44,27L19,27L31.5,2Z" style="fill:rgb(96,125,139);"/>
+    </g>
+    <path d="M64,33L64,121" style="fill:none;stroke:rgb(38,50,56);stroke-width:4.17px;"/>
 </svg>
