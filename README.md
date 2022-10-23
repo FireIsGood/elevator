@@ -1,4 +1,4 @@
-# [Learning Svelte Site](https://fireisgood.github.io/elevator/)
+# [Elevator Site](https://fireisgood.github.io/elevator/)
 
 Elevator site made with [Astro](https://astro.build) and [Svelte](https://svelte.dev/)
 
