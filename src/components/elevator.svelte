@@ -3,9 +3,11 @@
     { name: "Home", id: 1 },
     { name: "About", id: 2 },
     { name: "Contact", id: 3 },
+    { name: "Source Code", id: 4 },
   ];
 
   let doorTimer;
+  let doorClosed: Boolean = false;
 
   const activateElevator = function (floorId: Number, e: Event) {
     // Return early if button has been previously pressed
@@ -15,7 +17,7 @@
     const doors: Element = document.querySelector(".doors");
 
     // Close doors
-    doors.style.setProperty("--door-percent", "0%");
+    doorClosed = true;
 
     // Add active to button
     e.path[0].classList.add("active");
@@ -31,12 +33,12 @@
     // Keep door closed if still navigating
     if (doorTimer) clearTimeout(doorTimer);
     doorTimer = setTimeout(() => {
-      doors.style.setProperty("--door-percent", "-100%");
+      doorClosed = false;
     }, 1200);
   };
 </script>
 
-<div class="doors">
+<div class="doors" class:closed={doorClosed}>
   <div id="left-door" />
   <div id="right-door" />
 </div>
@@ -105,6 +107,11 @@
     position: fixed;
     inset: 0;
     display: grid;
+    pointer-events: none;
+
+    &.closed {
+      --door-percent: 0;
+    }
 
     > div {
       position: absolute;

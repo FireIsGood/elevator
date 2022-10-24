@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Elevator from "@components/elevator.svelte";
+import { Code } from "astro/components";
 import { Picture } from "@astrojs/image/components";
 ---
 
@@ -18,7 +19,7 @@ import { Picture } from "@astrojs/image/components";
     <p>Here is some filler text</p>
   </section>
   <section id="floor-2">
-    <h1>This is the second!</h1>
+    <h1>A floor to test images</h1>
     <p>Welcome to my second floor! Look at this image.</p>
     <div class="image-container">
       <Picture
@@ -32,7 +33,7 @@ import { Picture } from "@astrojs/image/components";
     </div>
   </section>
   <section id="floor-3">
-    <h1>This is the final floor!</h1>
+    <h1>A floor to test scrolling</h1>
     <p>This is actually below the first floor in the source code.</p>
     <p>And some extra long text to add scrolling for mobile users</p>
     <p>
@@ -101,6 +102,48 @@ import { Picture } from "@astrojs/image/components";
       rerum nisi, voluptas blanditiis amet soluta atque repellendus.
     </p>
   </section>
+  <section id="floor-4">
+    <h1>Source Code</h1>
+    <p>Code used to run the elevator:</p>
+    <Code
+      code={`let doorClosed: Boolean = false;
+        const activateElevator = function (floorId: Number, e: Event) {
+          // Return early if button has been previously pressed
+          if (e.path[0].classList.contains("active")) return;
+      
+          const floor: Element = document.querySelector(\`#floor-\${floorId}\`);
+          const doors: Element = document.querySelector(".doors");
+      
+          // Close doors
+          doorClosed = true;
+      
+          // Add active to button
+          e.path[0].classList.add("active");
+      
+          // Scroll to target
+          const scrollAction = setTimeout(() => {
+            location.href = \`#floor-\${floorId}\`;
+          }, 500);
+      
+          // Deactivate buttons after 1.2 seconds
+          setTimeout(() => e.path[0].classList.remove("active"), 1200);
+      
+          // Keep door closed if still navigating
+          if (doorTimer) clearTimeout(doorTimer);
+          doorTimer = setTimeout(() => {
+            doorClosed = false;
+          }, 1200);
+        };`}
+      lang="svelte"
+      theme="dracula"
+    />
+    <p>
+      <a
+        href="https://github.com/FireIsGood/elevator/blob/master/src/components/elevator.svelte"
+        >(Full file on Github)</a
+      >
+    </p>
+  </section>
 </Layout>
 
 <style lang="scss">
@@ -122,16 +165,22 @@ import { Picture } from "@astrojs/image/components";
     width: 100%;
     height: auto;
   }
+  :global(pre) {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.75em;
+    width: fit-content;
+  }
 
   // Main Styles
 
   section {
     overscroll-behavior: contain;
+    background-color: var(--lightblue-100);
 
-    > * + * {
+    :global(> * + *) {
       margin-top: 1em;
     }
-    // add more styles here!
   }
 
   .controller {
@@ -151,12 +200,15 @@ import { Picture } from "@astrojs/image/components";
   }
 
   #floor-1 {
-    background-color: var(--lightblue-300);
+    // background-color: var(--lightblue-100);
   }
   #floor-2 {
-    background-color: var(--lightblue-200);
+    // background-color: var(--lightblue-200);
   }
   #floor-3 {
-    background-color: var(--lightblue-100);
+    // background-color: var(--lightblue-300);
+  }
+  #floor-4 {
+    // background-color: var(--lightblue-400);
   }
 </style>
