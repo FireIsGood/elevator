@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Elevator from "@components/elevator.svelte";
 import { Picture } from "@astrojs/image/components";
 ---
 
@@ -11,17 +12,7 @@ import { Picture } from "@astrojs/image/components";
 </script>
 
 <Layout title="Elevator Showcase" noScroll={true} smoothScroll={true}>
-  <div class="controller">
-    <ul>
-      <li>
-        <a href="#floor-1">Floor 1</a>
-      </li><li>
-        <a href="#floor-2">Floor 2</a>
-      </li><li>
-        <a href="#floor-3">Floor 3</a>
-      </li>
-    </ul>
-  </div>
+  <Elevator client:idle />
   <section id="floor-1">
     <h1>This is the first floor!</h1>
     <p>Here is some fillter text</p>
