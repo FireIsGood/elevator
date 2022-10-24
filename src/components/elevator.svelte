@@ -5,23 +5,30 @@
     { name: "Contact", id: 3 },
   ];
 
-  export let currentFloor: Number;
+  let doorTimer;
 
   const activateElevator = function (floorId: Number, e: Event) {
-    if (floorId === currentFloor) return;
-    currentFloor = floorId;
     const floor: Element = document.querySelector(`#floor-${floorId}`);
     const doors: Element = document.querySelector(".doors");
+
+    // Close doors
     doors.style.setProperty("--door-percent", "0%");
 
+    // Add active to button
     e.path[0].classList.add("active");
 
+    // Scroll to target
     const scrollAction = setTimeout(() => {
       location.href = `#floor-${floorId}`;
     }, 500);
-    const openDoors = setTimeout(() => {
+
+    // Deactivate buttons after 1.2 seconds
+    setTimeout(() => e.path[0].classList.remove("active"), 1200);
+
+    // Keep door closed if still navigating
+    if (doorTimer) clearTimeout(doorTimer);
+    doorTimer = setTimeout(() => {
       doors.style.setProperty("--door-percent", "-100%");
-      e.path[0].classList.remove("active");
     }, 1200);
   };
 </script>
