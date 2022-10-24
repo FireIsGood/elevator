@@ -1,26 +1,27 @@
 <script lang="ts">
   const floors = [
-    { name: "Floor 1", id: 1 },
-    { name: "Floor 2", id: 2 },
-    { name: "Floor 3", id: 3 },
+    { name: "Home", id: 1 },
+    { name: "About", id: 2 },
+    { name: "Contact", id: 3 },
   ];
 
   export let currentFloor: Number;
 
-  const activateElevator = function (floorId: Number) {
+  const activateElevator = function (floorId: Number, e: Event) {
     if (floorId === currentFloor) return;
     currentFloor = floorId;
     const floor: Element = document.querySelector(`#floor-${floorId}`);
     const doors: Element = document.querySelector(".doors");
     doors.style.setProperty("--door-percent", "0%");
-    // alert(doors);
+
+    e.path[0].classList.add("active");
 
     const scrollAction = setTimeout(() => {
-      // floor.scrollIntoView();
       location.href = `#floor-${floorId}`;
     }, 500);
     const openDoors = setTimeout(() => {
       doors.style.setProperty("--door-percent", "-100%");
+      e.path[0].classList.remove("active");
     }, 1200);
   };
 </script>
@@ -35,7 +36,7 @@
       <li>
         <button
           title={`Go to floor ${floor.id}`}
-          on:click={() => activateElevator(floor.id)}
+          on:click={(e) => activateElevator(floor.id, e)}
         >
           {floor.name}
         </button>
@@ -48,7 +49,10 @@
   // General Styles
   button {
     background-color: var(--green-500);
-    padding: 0.5ch 1ch;
+    padding: 0.5ch;
+    width: 100%;
+    text-align: left;
+    border-radius: 0.5rem;
 
     &::before {
       content: "";
@@ -59,6 +63,14 @@
       background-color: var(--green-50);
       vertical-align: baseline;
       border-radius: 100vw;
+    }
+
+    &:global(.active) {
+      background-color: var(--green-400);
+
+      &::before {
+        background-color: white;
+      }
     }
   }
 
@@ -73,7 +85,7 @@
     > ul {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.5rem;
     }
   }
 
