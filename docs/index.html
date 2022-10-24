@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <!-- Redirect to first floor for better sharing --><script>
-  if (window.location.href.includes("#")) {
-    console.log("loaded with id!");
-  } else {
-    console.log("loaded without id...");
+  if (!window.location.href.includes("#")) {
     window.location.assign(`${window.location.href}#floor-1`);
   }
 </script>
 
-<html lang="en" class="smooth-scroll astro-3BSUDDUY">
+<html lang="en" class="smooth-scroll astro-PHFUKQJ2">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/elevator/favicon.svg">
     <meta name="generator" content="Astro v1.5.2">
     <title>Elevator Showcase</title>
 
@@ -29,38 +26,34 @@
 
 
 
-  <link rel="stylesheet" href="/elevator/assets/index.de72b4d5.css" /></head>
-  <body class="no-scroll astro-3BSUDDUY">
-    <main class="astro-3BSUDDUY">
-      <div class="controller astro-6GS3GUE3">
-    <ul class="astro-6GS3GUE3">
-      <li class="astro-6GS3GUE3">
-        <a href="#floor-1" class="astro-6GS3GUE3">Floor 1</a>
-      </li><li class="astro-6GS3GUE3">
-        <a href="#floor-2" class="astro-6GS3GUE3">Floor 2</a>
-      </li><li class="astro-6GS3GUE3">
-        <a href="#floor-3" class="astro-6GS3GUE3">Floor 3</a>
-      </li>
-    </ul>
-  </div><section id="floor-1" class="astro-6GS3GUE3">
-    <h1 class="astro-6GS3GUE3">This is the first floor!</h1>
-    <p class="astro-6GS3GUE3">Here is some fillter text</p>
-  </section><section id="floor-2" class="astro-6GS3GUE3">
-    <h1 class="astro-6GS3GUE3">This is the second!</h1>
-    <p class="astro-6GS3GUE3">Welcome to my second floor! Look at this image.</p>
-    <div class="image-container astro-6GS3GUE3">
-      <picture class="astro-6GS3GUE3 astro-EI35XRNH">
+  <link rel="stylesheet" href="/elevator/assets/index.bfc6abb3.css" /></head>
+  <body class="no-scroll astro-PHFUKQJ2">
+    <main class="astro-PHFUKQJ2">
+      <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=t=>{const e=async()=>{await(await t())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)},window.dispatchEvent(new Event("astro:idle"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="Zfhkru" component-url="/elevator/elevator.2c5c345f.js" component-export="default" renderer-url="/elevator/client.48b9d1fa.js" props="{&quot;class&quot;:[0,&quot;astro-UKV47OEQ&quot;]}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;Elevator&quot;,&quot;value&quot;:true}" await-children=""><div class="doors svelte-ogsju1"><div id="left-door" class="svelte-ogsju1"></div>
+  <div id="right-door" class="svelte-ogsju1"></div></div>
+<div class="controller svelte-ogsju1"><ul class="svelte-ogsju1"><li><button title="Go to floor 1" class="svelte-ogsju1">Home</button>
+      </li><li><button title="Go to floor 2" class="svelte-ogsju1">About</button>
+      </li><li><button title="Go to floor 3" class="svelte-ogsju1">Contact</button>
+      </li></ul>
+</div></astro-island><section id="floor-1" class="astro-UKV47OEQ">
+    <h1 class="astro-UKV47OEQ">This is the first floor!</h1>
+    <p class="astro-UKV47OEQ">Here is some fillter text</p>
+  </section><section id="floor-2" class="astro-UKV47OEQ">
+    <h1 class="astro-UKV47OEQ">This is the second!</h1>
+    <p class="astro-UKV47OEQ">Welcome to my second floor! Look at this image.</p>
+    <div class="image-container astro-UKV47OEQ">
+      <picture class="astro-UKV47OEQ astro-EI35XRNH">
 	<source type="image/avif" srcset="/elevator/assets/Product_Life_Cycle_Management_e74eR.avif 500w,/elevator/assets/Product_Life_Cycle_Management_1oP0EY.avif 1535w" class="astro-EI35XRNH" sizes="(max-width: 650em)"><source type="image/webp" srcset="/elevator/assets/Product_Life_Cycle_Management_ndODx.webp 500w,/elevator/assets/Product_Life_Cycle_Management_Z2wq7nc.webp 1535w" class="astro-EI35XRNH" sizes="(max-width: 650em)"><source type="image/png" srcset="/elevator/assets/Product_Life_Cycle_Management_Z2gVgCm.png 500w,/elevator/assets/Product_Life_Cycle_Management_yxH6l.png 1535w" class="astro-EI35XRNH" sizes="(max-width: 650em)">
 	<img src="/elevator/assets/Product_Life_Cycle_Management_ZH9EMB.png" class="astro-EI35XRNH" loading="lazy" decoding="async" alt="A random image off wikipedia">
 </picture>
 
 
     </div>
-  </section><section id="floor-3" class="astro-6GS3GUE3">
-    <h1 class="astro-6GS3GUE3">This is the final floor!</h1>
-    <p class="astro-6GS3GUE3">This is actually below the first floor in the source code.</p>
-    <p class="astro-6GS3GUE3">And some extra long text to add scrolling for mobile users</p>
-    <p class="astro-6GS3GUE3">
+  </section><section id="floor-3" class="astro-UKV47OEQ">
+    <h1 class="astro-UKV47OEQ">This is the final floor!</h1>
+    <p class="astro-UKV47OEQ">This is actually below the first floor in the source code.</p>
+    <p class="astro-UKV47OEQ">And some extra long text to add scrolling for mobile users</p>
+    <p class="astro-UKV47OEQ">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
       consectetur culpa consequuntur neque quia fugiat harum corporis repellat
       minus officia inventore possimus quos facilis maiores libero aut
@@ -73,7 +66,7 @@
       sapiente quam consequuntur temporibus similique, tempora dicta possimus
       rerum nisi, voluptas blanditiis amet soluta atque repellendus.
     </p>
-    <p class="astro-6GS3GUE3">
+    <p class="astro-UKV47OEQ">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
       consectetur culpa consequuntur neque quia fugiat harum corporis repellat
       minus officia inventore possimus quos facilis maiores libero aut
@@ -86,7 +79,7 @@
       sapiente quam consequuntur temporibus similique, tempora dicta possimus
       rerum nisi, voluptas blanditiis amet soluta atque repellendus.
     </p>
-    <p class="astro-6GS3GUE3">
+    <p class="astro-UKV47OEQ">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
       consectetur culpa consequuntur neque quia fugiat harum corporis repellat
       minus officia inventore possimus quos facilis maiores libero aut
@@ -99,7 +92,7 @@
       sapiente quam consequuntur temporibus similique, tempora dicta possimus
       rerum nisi, voluptas blanditiis amet soluta atque repellendus.
     </p>
-    <p class="astro-6GS3GUE3">
+    <p class="astro-UKV47OEQ">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
       consectetur culpa consequuntur neque quia fugiat harum corporis repellat
       minus officia inventore possimus quos facilis maiores libero aut
@@ -112,7 +105,7 @@
       sapiente quam consequuntur temporibus similique, tempora dicta possimus
       rerum nisi, voluptas blanditiis amet soluta atque repellendus.
     </p>
-    <p class="astro-6GS3GUE3">
+    <p class="astro-UKV47OEQ">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
       consectetur culpa consequuntur neque quia fugiat harum corporis repellat
       minus officia inventore possimus quos facilis maiores libero aut
