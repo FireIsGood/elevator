@@ -8,6 +8,9 @@
   let doorTimer;
 
   const activateElevator = function (floorId: Number, e: Event) {
+    // Return early if button has been previously pressed
+    if (e.path[0].classList.contains("active")) return;
+
     const floor: Element = document.querySelector(`#floor-${floorId}`);
     const doors: Element = document.querySelector(".doors");
 
