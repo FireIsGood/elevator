@@ -11,7 +11,8 @@
 
   const activateElevator = function (floorId: Number, e: Event) {
     // Return early if button has been previously pressed
-    if (e.path[0].classList.contains("active")) return;
+    console.log(e.target);
+    if (e.target.classList.contains("active")) return;
 
     const floor: Element = document.querySelector(`#floor-${floorId}`);
     const doors: Element = document.querySelector(".doors");
@@ -20,15 +21,15 @@
     doorClosed = true;
 
     // Add active to button
-    e.path[0].classList.add("active");
+    e.target.classList.add("active");
 
     // Scroll to target
     const scrollAction = setTimeout(() => {
       location.href = `#floor-${floorId}`;
-    }, 500);
+    }, 400);
 
     // Deactivate buttons after 1.2 seconds
-    setTimeout(() => e.path[0].classList.remove("active"), 1200);
+    setTimeout(() => e.target.classList.remove("active"), 1200);
 
     // Keep door closed if still navigating
     if (doorTimer) clearTimeout(doorTimer);
