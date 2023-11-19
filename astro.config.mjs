@@ -5,14 +5,10 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    svelte(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
-    compress(),
-  ],
+  integrations: [svelte(), image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), compress()],
   outDir: "./docs",
   site: "https://fireisgood.github.io/",
-  base: "/elevator",
+  base: "/elevator"
 });
