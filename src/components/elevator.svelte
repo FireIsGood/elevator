@@ -81,6 +81,10 @@
       background-color: var(--green-400);
 
       &::before {
+        background-image: radial-gradient(
+          hsl(48, 100%, 80%) 50%,
+          transparent 55%
+        );
         background-color: white;
       }
     }
