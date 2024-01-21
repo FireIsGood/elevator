@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Elevator from "@components/elevator.svelte";
-import { Code } from "astro/components";
-import { Picture } from "@astrojs/image/components";
+import { Code } from "astro:components";
+import { Picture } from "astro:assets";
 ---
 
 <!-- Redirect to first floor for better sharing -->
@@ -26,8 +26,8 @@ import { Picture } from "@astrojs/image/components";
         src="https://upload.wikimedia.org/wikipedia/commons/6/60/Product_Life_Cycle_Management.png"
         alt="A random image off wikipedia"
         sizes="(max-width: 650em)"
-        widths={[500, 1535]}
-        aspectRatio="1535:1016"
+        width="1535"
+        height="1016"
         formats={["avif", "webp", "png"]}
       />
     </div>

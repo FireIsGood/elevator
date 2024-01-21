@@ -10,7 +10,7 @@ const { title, noScroll, smoothScroll } = Astro.props;
 const bodyClasses = [noScroll ? "no-scroll" : ""].join(" ");
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class={smoothScroll ? "smooth-scroll" : ""}>
   <head>
     <meta charset="UTF-8" />
@@ -67,8 +67,15 @@ const bodyClasses = [noScroll ? "no-scroll" : ""].join(" ");
       }
 
       code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
       }
       ul {
         padding-left: 0;
